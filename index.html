@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Registration Form </title>
+</head>
+<body>
+  <style>
+    
+    body{
+      margin:0 30% 0;
+    }
+    .align{
+     background-color: #99ffaa;
+      text-align: center;
+      width: 500px;
+      border: 1px solid black;
+      margin: auto 0;
+    }
+    .d-flex{
+      display:flex;
+      justify-content: center;
+    }
+    .input{
+      width: 200px;
+      border:2px solid gray;
+    }
+    .input:hover{
+      background-color: lightblue;
+    }
+    .radio{
+      border:2px solid crimson;
+    }
+    
+  </style>
+
+<body>
+  <h1> Registration form</h1>
+  <form class="align" id="form">
+  <div class="form-container">
+      <div>
+      <label for="name"> Name*:</label>
+      <input type="text" class="input" id="name" name="name" placeholder="name" required/>
+      <span id="namee_error"></span><br>
+      <label for="e-mail">E-mail*:</label>
+      <input type="email" class="input"  name="e_mail" id="e_mail"  placeholder="abcd@gmail.com" required/>
+      <span id="email_error"></span><br>
+      <label for="age">Age*:</label>
+      <input type="number" class="input"  name="age" id="age" placeholder="age" required/><br>
+      
+      <label for="gender">Gender*:</label>
+      <input type="radio" class="radio" checked  name="gender" id="gender" value="male" >Male
+      <input type="radio" class="radio"  name="gender" id="gender" value="Female">FeMale</br>
+      <br>
+      <label for="quota">quota:</label>
+      <select class="quota" name="quota" id="quota" required>
+          <option value="" disabled selected> select Quota</option>
+          <option value="general">General</option>
+          <option value="tatkal">Tatkal</option>
+          <option value="premium tatkal">Premium Tatkal</option>
+      </select><br><br>
+      <div class="d-flex">
+    <label for="from">from: </label>
+    <select  class="quota" name="fromadd" id="fromadd" required>
+      <option value="" disabled selected> select</option>
+      <option value="hyderabed">hyderabed</option>
+      <option value="guntur">guntur</option>
+      <option value="vijayawada">vijayawada</option>
+    </select>
+    
+    <label for="toaddress">to: </label>
+    <select  class="quota" name="toaddress" id="toaddress" required>
+      <option value="" disabled selected> select</option>
+      <option value="hyderabed">hyderabed</option>
+      <option value="guntur">guntur</option>
+      <option value="vijayawada">vijayawada</option>
+    </select>
+   
+  </div>
+  <br>
+  <label > amount:</label>
+  <input id="amount" type="text"  value="" readonly /><br><br>
+  <label >total:</label>
+  <input id="incAmount" type="text"  value="" readonly />
+
+      <div class="radio-insurence">
+        <label>insurence*:</label>
+        <input class="radio-input" checked class="radio"  id="insurence" type="radio" name="media" value="Yes" required /> Yes 
+        <input class="radio-input" class="radio"  id="insurence" type="radio" name="media" value="No" required/> No <br>
+        </div>
+        
+        <label for="address">Address *</label>
+        <input type="text" class="input"  name="address" id="address" placeholder="address" required><br>
+        <span id="address_error"></span><br>
+        <input class="button" type="button" id="canvasDiv"  value="submit">
+    
+  </div>
+</div>
+</form>
+  <script src="app.js"></script>
+</body>
+</html>
